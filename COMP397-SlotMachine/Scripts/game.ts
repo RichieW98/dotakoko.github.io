@@ -241,6 +241,7 @@ function resetFruitTally() {
 }
 
 function spinReels() {
+    createjs.Sound.play("spinclick");
     // Add Spin Reels code here
     if (playerBet == 1)
         playerMoney = playerMoney - 1;
@@ -503,6 +504,13 @@ function jack() {
         alert("you got the jackpot!!!!~~");
 }
 
+
+// Callback function that allows me to respond to button click events
+function ButtonClicked(event: createjs.MouseEvent) {
+    createjs.Sound.play("spinclick");
+}
+
+
 function createUI(): void {
     // instantiate my background
     background = new createjs.Bitmap(assets.getResult("background"));
@@ -550,6 +558,7 @@ function createUI(): void {
     game.addChild(spinButton);
 
     spinButton.on("click", spinReels);
+    spinButton.on("click", ButtonClicked);
 
     // bet Button
     bet1btn = new objects.Button("bet1", 318, 570, false);
