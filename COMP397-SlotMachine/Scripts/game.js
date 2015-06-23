@@ -23,7 +23,7 @@ var resetButton;
 var tiles = [];
 var tileContainers = [];
 // Game Variables
-var playerMoney = 4999;
+var playerMoney = 1000;
 var winnings = 0;
 var jackpot = 5000;
 var turn = 0;
