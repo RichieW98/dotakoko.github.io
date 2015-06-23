@@ -507,7 +507,7 @@ function jack() {
 
 // Callback function that allows me to respond to button click events
 function ButtonClicked(event: createjs.MouseEvent) {
-    createjs.Sound.play("spinclick");
+    createjs.Sound.play("clicked");
 }
 
 
